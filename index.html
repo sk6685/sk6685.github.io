@@ -2,30 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sushama Jadhav Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sushama Jadhav - Data Engineer</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; background: #f0f0f0; }
-    .container { max-width: 800px; margin: auto; background: white; padding: 30px; box-shadow: 0 0 10px #ccc; }
-    h1 { color: #007acc; }
-    a { color: #007acc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+    .section-title {
+      border-bottom: 3px solid #0d6efd;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.5rem;
+    }
+    a {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .card {
+      margin-bottom: 1.5rem;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Sushama Jadhav</h1>
-    <p>Data Engineer | Python Developer | Aspiring Data Scientist</p>
 
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/sushamajadhav/SpringBoard-DataScience" target="_blank">SpringBoard DataScience</a> — Data science projects and capstone work.</li>
-      <!-- Add more projects here -->
-    </ul>
+  <div class="container my-5">
+    <header class="text-center mb-5">
+      <h1 class="display-4">Sushama Jadhav</h1>
+      <p class="lead">Data Engineer</p>
+    </header>
 
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:sushama.jadhav@example.com">sushama.jadhav@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/sushama-jadhav" target="_blank">sushama-jadhav</a></p>
+    <section id="contact" class="mb-5">
+      <h2 class="section-title">Contact</h2>
+      <ul class="list-unstyled fs-5">
+        <li><strong>Email:</strong> <a href="mailto:sushama@workwebmail.com">sushama@workwebmail.com</a></li>
+        <li><strong>Phone:</strong> (669) 300-8445</li>
+        <li><strong>Location:</strong> California, USA</li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sushamajadhav/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sushamajadhav</a></li>
+      </ul>
+    </section>
+
+    <section id="profile" class="mb-5">
+      <h2 class="section-title">Profile</h2>
+      <p class="fs-5">
+        Experienced Data Engineer with 7+ years of expertise designing and implementing scalable, real-time data solutions.  
+        Proficient in AWS (Kinesis, Lambda, ECS, DynamoDB, EMR), Kubernetes, Python (PySpark, Pandas), SQL, and Power BI.  
+        Skilled in containerization, Infrastructure-as-Code (Terraform), and data pipeline orchestration (Apache Airflow).  
+        Proven ability to optimize data systems, deliver dashboards, and automate workflows efficiently.
+      </p>
+    </section>
+
+    <section id="skills" class="mb-5">
+      <h2 class="section-title">Skills</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <ul>
+            <li><strong>Programming:</strong> Python (Pandas, PySpark), SQL</li>
+            <li><strong>Cloud Platforms:</strong> AWS (Kinesis, Lambda, DynamoDB, S3, ECS, EMR, RDS, CloudFormation), GCP</li>
+            <li><strong>Big Data & Processing:</strong> Apache Airflow, Hadoop, Hive, Spark</li>
+            <li><strong>Containerization & Orchestration:</strong> Docker, Kubernetes (EKS/AKS)</li>
+            <li><strong>ETL & Data Modeling:</strong> Informatica, PySpark pipelines</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li><strong>Infrastructure as Code:</strong> Terraform, CloudFormation</li>
+            <li><strong>Data Visualization:</strong> Power BI, Tableau</li>
+            <li><strong>Database Systems:</strong> PostgreSQL, DynamoDB, MySQL</li>
+            <li><strong>Automation Tools:</strong> GitHub Actions (CI/CD), Pandas workflows</li>
+            <li><strong>Data Warehouse:</strong> Snowflake, Redshift</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Data Engineer, Sunnova Energy <small class="text-muted">(06/2023 – Present)</small></h5>
+          <ul>
+            <li>Designed real-time data streaming architecture using AWS Kinesis, Lambda, and Firehose for scalable solar panel data processing.</li>
+            <li>Enhanced PySpark streaming jobs leveraging AWS EMR.</li>
+            <li>Developed event-driven Apache Airflow workflows with automated recovery.</li>
+            <li>Migrated legacy Informatica ETL workflows to AWS Lambda, reducing costs and improving availability.</li>
+            <li>Containerized applications with Docker, deployed on AWS ECS and Kubernetes; automated CI/CD with GitHub Actions and Terraform.</li>
+            <li>Optimized queries for PostgreSQL RDS and DynamoDB for minimal latency.</li>
+            <li>Built Power BI dashboards for solar panel performance insights.</li>
+            <li>Developed Python ETL pipelines replicating Salesforce data to PostgreSQL.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Data Engineer (Contract), BNY Mellon <small class="text-muted">(08/2019 – 05/2023)</small></h5>
+          <ul>
+            <li>Built real-time data pipelines using Kafka, Airflow, and Spark Streaming integrating Snowflake.</li>
+            <li>Developed ETL pipelines with AWS Glue and Airflow from multiple data sources.</li>
+            <li>Managed AWS environments ensuring scalability and reliability.</li>
+            <li>Optimized Redshift schemas and queries for improved performance.</li>
+            <li>Collaborated with BI and data science teams to ensure accurate data requirements and documentation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Data Engineer Trainee (Contract), Lululemon Athletica Inc <small class="text-muted">(07/2018 – 07/2019)</small></h5>
+          <ul>
+            <li>Built SQL and GCP Data Fusion pipelines reducing ingestion times by 50%.</li>
+            <li>Monitored pipelines using AWS Lambda and CloudWatch ensuring reliability.</li>
+            <li>Automated financial reporting with Python pipelines, cutting manual effort by 90%.</li>
+            <li>Used Power BI and SQL for incident management analytics.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
   </div>
+
+  <!-- Bootstrap JS Bundle (optional for interactive components) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
