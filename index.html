@@ -3,301 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sushama Jadhav · Data Engineering Portfolio</title>
+  <title>Sushama Jadhav - Data Engineer</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
     body {
-      background: radial-gradient(ellipse 120% 80% at 50% 10%, #10203b 40%, #1d2747 100%);
-      color: #e2e8f0;
-      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-      min-height: 100vh;
-      padding-bottom: 2rem;
+      background-color: #f8f9fa;
+      color: #212529;
     }
-    .hero-section {
-      max-width: 1050px;
-      margin: 2.3rem auto 3.5rem auto;
-      background: rgba(25,38,65,0.95);
-      border-radius: 2rem;
-      box-shadow: 0 8px 48px rgba(34,197,246,0.08), 0 2px 12px rgba(0,0,0,0.15);
-      overflow: hidden;
-      display: flex;
-      align-items: stretch;
-      position: relative;
-    }
-    .hero-img-wrap {
-      background: radial-gradient(ellipse 150% 100% at 60% 40%, rgba(56,189,248,0.11) 50%, rgba(10,34,89,0.7) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0 320px;
-      min-width: 260px;
-      padding: 2.5rem 2.5rem 2.5rem 2.2rem;
-      position: relative;
-      z-index: 2;
-    }
-    .hero-img {
-      width: 210px;
-      height: 210px;
-      border-radius: 50%;
-      border: 6px solid rgba(56,189,248,0.28);
-      box-shadow: 0 0 32px 6px rgba(34,197,246,0.07);
-      background: #0f2138;
-      object-fit: cover;
-      display: block;
-    }
-    .hero-content {
-      flex: 1 1 0;
-      padding: 2.9rem 2.7rem 2.7rem 1.2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      z-index: 2;
-    }
-    .hero-title {
-      font-size: 2.45rem;
-      font-weight: 800;
-      color: #38bdf8;
-      letter-spacing: 0.6px;
-      margin-bottom: 0.4rem;
-      text-shadow: 0 2px 16px #0ea5e9b8;
-    }
-    .hero-role {
-      font-size: 1.25rem;
-      color: #e0f2fe;
-      font-weight: 600;
-      margin-bottom: 1.12rem;
-      letter-spacing: 0.3px;
-    }
-    .hero-divider {
-      width: 70px;
-      border-top: 3.5px solid #38bdf8;
-      opacity: 0.9;
-      border-radius: 2px;
-      margin: 1.3rem 0 2.1rem 0;
-    }
-    .hero-contact {
-      margin-bottom: 1rem;
-      font-size: 1.13rem;
-      display: flex;
-      align-items: center;
-      gap: 0.7em;
-      color: #bae6fd;
-    }
-    .hero-contact i {
-      color: #38bdf8;
-      font-size: 1.3rem;
-    }
-    .hero-location {
-      margin-left: 1.5rem;
-      color: #7dd3fc;
-      font-size: 1rem;
-      font-weight: 500;
-    }
-    .hero-social a {
-      color: #38bdf8;
-      font-size: 1.45rem;
-      margin-right: 15px;
-      transition: color 0.15s;
-    }
-    .hero-social a:hover { color: #7dd3fc; }
-    .waves-bg {
-      position: absolute;
-      bottom: 0; left: 0; right: 0; height: 64px;
-      z-index: 1;
-      pointer-events: none;
-    }
-    .about-section {
-      max-width: 900px;
-      margin: 0 auto 2.7rem auto;
-      background: rgba(17,28,48,0.88);
-      border-radius: 1.5rem;
-      box-shadow: 0 2px 32px rgba(56,189,248,0.09);
-      padding: 2.1rem 2rem 1.8rem 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-      backdrop-filter: blur(3px);
-      border: 1.5px solid rgba(56,189,248,0.09);
-    }
-    .about-title {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #7dd3fc;
-      margin-bottom: 0.7rem;
-      letter-spacing: 0.5px;
-      display: flex;
-      align-items: center;
-      gap: 0.6em;
-    }
-    .about-badges {
-      margin-top: 1.2rem;
-    }
-    .about-badge {
-      display: inline-block;
-      margin: 0.23rem 0.5rem 0.23rem 0;
-      padding: 0.38em 1em;
-      color: #0c223e;
-      background: linear-gradient(90deg, #7dd3fc 10%, #38bdf8 100%);
-      border-radius: 1.3rem;
-      font-size: 1.01rem;
-      font-weight: 600;
-      box-shadow: 0 2px 7px rgba(56,189,248,0.08);
-      letter-spacing: 0.25px;
-    }
-    .project-tabs-section {
-      max-width: 1050px;
-      margin: 0 auto 2.7rem auto;
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      flex-wrap: wrap;
-    }
-    .project-card {
-      background: linear-gradient(120deg, #083047 70%, #0ea5e9 100%);
-      border-radius: 1.3rem;
-      box-shadow: 0 2px 18px rgba(56,189,248,0.13);
-      padding: 2.2rem 2.6rem;
-      min-width: 280px;
-      max-width: 350px;
-      color: #e0f2fe;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform .12s, box-shadow .12s;
-      text-align: center;
-      border: 2px solid transparent;
-    }
-    .project-card:hover {
-      box-shadow: 0 4px 28px #38bdf8c0;
-      transform: translateY(-5px) scale(1.03);
-      border: 2px solid #38bdf8;
-    }
-    .project-card i {
-      font-size: 2.5rem;
-      color: #7dd3fc;
-      margin-bottom: 1rem;
-    }
-    .project-card h2 {
-      color: #7dd3fc;
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-    .project-card p {
-      font-size: 1.08rem;
-      color: #e0f2fe;
+    .section-title {
+      border-bottom: 3px solid #0d6efd;
+      padding-bottom: 0.3rem;
       margin-bottom: 1.5rem;
     }
-    .project-card a.btn {
-      font-weight: 600;
-      font-size: 1.12rem;
-      padding: 0.7em 2em;
-      border-radius: 2em;
-      background: linear-gradient(90deg, #38bdf8 10%, #7dd3fc 100%);
-      border: none;
-      color: #0c223e;
-      transition: background 0.12s, color 0.12s;
+    a {
+      color: #0d6efd;
       text-decoration: none;
     }
-    .project-card a.btn:hover {
-      background: linear-gradient(90deg, #0ea5e9 15%, #38bdf8 100%);
-      color: #fff;
+    a:hover {
+      text-decoration: underline;
     }
-    .portfolio-footer {
-      color: #7dd3fc;
-      font-size: 0.99rem;
-      margin-top: 2.5rem;
-      margin-bottom: 0.6rem;
-      text-align: center;
-      letter-spacing: 0.2px;
-    }
-    @media (max-width: 991px) {
-      .hero-section,
-      .project-tabs-section { flex-direction: column; align-items: center; }
-      .hero-img-wrap,
-      .hero-content { padding: 2rem 1.1rem; }
-      .project-card { min-width: 220px; max-width: 95vw; }
-    }
-    @media (max-width: 600px) {
-      .hero-section { border-radius: 1rem; }
-      .project-card { border-radius: 0.7rem; }
-      .hero-img { width: 140px; height: 140px; }
+    .card {
+      margin-bottom: 1.5rem;
     }
   </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <div class="hero-section">
-    <div class="hero-img-wrap">
-      <img src="https://raw.githubusercontent.com/sk6685/sk6685.github.io/main/images/photo.png" alt="Sushama Jadhav" class="hero-img" />
-    </div>
-    <div class="hero-content">
-      <div class="hero-title">Sushama Jadhav</div>
-      <div class="hero-role">Data Professional &mdash; DE / ML / DATA SCIENCE / AI</div>
-      <hr class="hero-divider">
-      <div class="hero-contact">
-        <i class="bi bi-envelope-fill"></i>
-        <span>sushama@workwebmail.com</span>
-      </div>
-      <div class="hero-contact">
-        <i class="bi bi-telephone-fill"></i>
-        <span>(669) 300-8445</span>
-        <span class="hero-location"><i class="bi bi-geo-alt-fill me-1"></i>California, USA</span>
-      </div>
-      <div class="hero-social mt-2">
-        <a href="https://www.linkedin.com/in/sushamajadhav/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="mailto:sushama@workwebmail.com" title="Email"><i class="bi bi-envelope"></i></a>
-        <a href="https://github.com/sushamajadhav/SpringBoard-DataScience" target="_blank" title="SpringBoard-DataScience Repository"><i class="bi bi-github"></i></a>
-      </div>
-      <svg class="waves-bg" viewBox="0 0 1200 64" preserveAspectRatio="none"><path d="M0,32 C200,80 400,0 600,32 C800,64 1000,8 1200,32 L1200,64 L0,64 Z" fill="#38bdf8" fill-opacity="0.11"></path></svg>
-    </div>
-  </div>
 
-  <!-- About Me Section -->
-  <section class="about-section">
-    <div class="about-title"><i class="bi bi-person-badge"></i> About Me</div>
-    <div>
-      <p>
-        Hello! I'm <strong>Sushama Jadhav</strong>, a passionate Data Professional with expertise in Data Engineering, Machine Learning, and Data Science. I love transforming raw data into actionable insights and architecting scalable solutions for business impact.
+  <div class="container my-5">
+    <header class="text-center mb-5">
+      <h1 class="display-4">Sushama Jadhav</h1>
+      <p class="lead">Data Engineer</p>
+    </header>
+
+    <section id="contact" class="mb-5">
+      <h2 class="section-title">Contact</h2>
+      <ul class="list-unstyled fs-5">
+        <li><strong>Email:</strong> <a href="mailto:sushama@workwebmail.com">sushama@workwebmail.com</a></li>
+        <li><strong>Phone:</strong> (669) 300-8445</li>
+        <li><strong>Location:</strong> California, USA</li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sushamajadhav/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sushamajadhav</a></li>
+      </ul>
+    </section>
+
+    <section id="profile" class="mb-5">
+      <h2 class="section-title">Profile</h2>
+      <p class="fs-5">
+        Experienced Data Engineer with 7+ years of expertise designing and implementing scalable, real-time data solutions.  
+        Proficient in AWS (Kinesis, Lambda, ECS, DynamoDB, EMR), Kubernetes, Python (PySpark, Pandas), SQL, and Power BI.  
+        Skilled in containerization, Infrastructure-as-Code (Terraform), and data pipeline orchestration (Apache Airflow).  
+        Proven ability to optimize data systems, deliver dashboards, and automate workflows efficiently.
       </p>
-      <p>
-        With over 7 years of experience in cloud platforms, automation, advanced analytics, and mentoring teams, I specialize in building robust data pipelines, deploying ML models, and making data work for organizations of all sizes. My goal is to bridge the gap between complex data and real-world decision making.
-      </p>
-    </div>
-    <div>
-      <span class="about-badge">Python</span>
-      <span class="about-badge">AWS</span>
-      <span class="about-badge">Airflow</span>
-      <span class="about-badge">Spark</span>
-      <span class="about-badge">SQL</span>
-      <span class="about-badge">Kubernetes</span>
-      <span class="about-badge">Power BI</span>
-      <span class="about-badge">Terraform</span>
-      <span class="about-badge">Machine Learning</span>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects Tabs Section -->
-  <div class="project-tabs-section">
-    <div class="project-card">
-      <i class="bi bi-robot"></i>
-      <h2>Machine Learning Projects</h2>
-      <p>Explore my work on predictive modeling, automation, and end-to-end machine learning pipelines.</p>
-      <a class="btn" href="ml-projects.html">View Machine Learning Projects</a>
-    </div>
-    <div class="project-card">
-      <i class="bi bi-diagram-3-fill"></i>
-      <h2>Data Engineering Projects</h2>
-      <p>Discover robust data pipelines, cloud solutions, and scalable architectures I've engineered.</p>
-      <a class="btn" href="de-projects.html">View Data Engineering Projects</a>
-    </div>
+    <section id="skills" class="mb-5">
+      <h2 class="section-title">Skills</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <ul>
+            <li><strong>Programming:</strong> Python (Pandas, PySpark), SQL</li>
+            <li><strong>Cloud Platforms:</strong> AWS (Kinesis, Lambda, DynamoDB, S3, ECS, EMR, RDS, CloudFormation), GCP</li>
+            <li><strong>Big Data & Processing:</strong> Apache Airflow, Hadoop, Hive, Spark</li>
+            <li><strong>Containerization & Orchestration:</strong> Docker, Kubernetes (EKS/AKS)</li>
+            <li><strong>ETL & Data Modeling:</strong> Informatica, PySpark pipelines</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li><strong>Infrastructure as Code:</strong> Terraform, CloudFormation</li>
+            <li><strong>Data Visualization:</strong> Power BI, Tableau</li>
+            <li><strong>Database Systems:</strong> PostgreSQL, DynamoDB, MySQL</li>
+            <li><strong>Automation Tools:</strong> GitHub Actions (CI/CD), Pandas workflows</li>
+            <li><strong>Data Warehouse:</strong> Snowflake, Redshift</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Data Engineer, Sunnova Energy <small class="text-muted">(06/2023 – Present)</small></h5>
+          <ul>
+            <li>Designed real-time data streaming architecture using AWS Kinesis, Lambda, and Firehose for scalable solar panel data processing.</li>
+            <li>Enhanced PySpark streaming jobs leveraging AWS EMR.</li>
+            <li>Developed event-driven Apache Airflow workflows with automated recovery.</li>
+            <li>Migrated legacy Informatica ETL workflows to AWS Lambda, reducing costs and improving availability.</li>
+            <li>Containerized applications with Docker, deployed on AWS ECS and Kubernetes; automated CI/CD with GitHub Actions and Terraform.</li>
+            <li>Optimized queries for PostgreSQL RDS and DynamoDB for minimal latency.</li>
+            <li>Built Power BI dashboards for solar panel performance insights.</li>
+            <li>Developed Python ETL pipelines replicating Salesforce data to PostgreSQL.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Data Engineer (Contract), BNY Mellon <small class="text-muted">(08/2019 – 05/2023)</small></h5>
+          <ul>
+            <li>Built real-time data pipelines using Kafka, Airflow, and Spark Streaming integrating Snowflake.</li>
+            <li>Developed ETL pipelines with AWS Glue and Airflow from multiple data sources.</li>
+            <li>Managed AWS environments ensuring scalability and reliability.</li>
+            <li>Optimized Redshift schemas and queries for improved performance.</li>
+            <li>Collaborated with BI and data science teams to ensure accurate data requirements and documentation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Data Engineer Trainee (Contract), Lululemon Athletica Inc <small class="text-muted">(07/2018 – 07/2019)</small></h5>
+          <ul>
+            <li>Built SQL and GCP Data Fusion pipelines reducing ingestion times by 50%.</li>
+            <li>Monitored pipelines using AWS Lambda and CloudWatch ensuring reliability.</li>
+            <li>Automated financial reporting with Python pipelines, cutting manual effort by 90%.</li>
+            <li>Used Power BI and SQL for incident management analytics.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
   </div>
 
-  <div class="portfolio-footer">
-    &copy; 2025 Sushama Jadhav · Data Engineering Portfolio
-  </div>
+  <!-- Bootstrap JS Bundle (optional for interactive components) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
