@@ -13,13 +13,10 @@
       font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
       min-height: 100vh;
       padding-bottom: 2rem;
-      letter-spacing: 0.01em;
     }
-    /* Hero Section */
     .hero-section {
       max-width: 1050px;
       margin: 2.3rem auto 3.5rem auto;
-      padding: 0;
       background: rgba(25,38,65,0.95);
       border-radius: 2rem;
       box-shadow: 0 8px 48px rgba(34,197,246,0.08), 0 2px 12px rgba(0,0,0,0.15);
@@ -111,38 +108,33 @@
       z-index: 1;
       pointer-events: none;
     }
-    /* Glass Cards */
-    .glass-section {
-      max-width: 1050px;
+    .about-section {
+      max-width: 900px;
       margin: 0 auto 2.7rem auto;
-      background: rgba(17,28,48,0.75);
+      background: rgba(17,28,48,0.88);
       border-radius: 1.5rem;
       box-shadow: 0 2px 32px rgba(56,189,248,0.09);
       padding: 2.1rem 2rem 1.8rem 2rem;
       display: flex;
-      flex-wrap: wrap;
-      gap: 2.1rem;
+      flex-direction: column;
+      gap: 1.2rem;
       backdrop-filter: blur(3px);
       border: 1.5px solid rgba(56,189,248,0.09);
     }
-    .glass-about {
-      flex: 1 1 340px;
-      min-width: 250px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .glass-title {
-      font-size: 1.33rem;
+    .about-title {
+      font-size: 1.6rem;
       font-weight: 700;
       color: #7dd3fc;
       margin-bottom: 0.7rem;
       letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
     }
-    .glass-badges {
+    .about-badges {
       margin-top: 1.2rem;
     }
-    .glass-badge {
+    .about-badge {
       display: inline-block;
       margin: 0.23rem 0.5rem 0.23rem 0;
       padding: 0.38em 1em;
@@ -154,97 +146,65 @@
       box-shadow: 0 2px 7px rgba(56,189,248,0.08);
       letter-spacing: 0.25px;
     }
-    .glass-info {
-      flex: 1 1 320px;
-      min-width: 260px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .glass-info-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .glass-info-list li {
-      margin-bottom: 0.9em;
-      font-size: 1.08rem;
-      display: flex;
-      align-items: center;
-      gap: 0.7em;
-      color: #e0f2fe;
-    }
-    .glass-info-list i {
-      color: #38bdf8;
-      font-size: 1.18em;
-    }
-    /* Tabs */
-    .nav-tabs .nav-link {
-      color: #38bdf8;
-      font-weight: 600;
-      border: none;
-      background: none;
-      border-radius: 0.8rem 0.8rem 0 0;
-      margin-right: 7px;
-      letter-spacing: 0.3px;
-      font-size: 1.03rem;
-      transition: background 0.2s, color 0.15s;
-      padding: 0.7em 1.5em;
-    }
-    .nav-tabs .nav-link.active {
-      background: linear-gradient(90deg, #38bdf8 0%, #0ea5e9 100%);
-      color: #083047 !important;
-      border: none;
-    }
-    .tab-content .project-card {
-      background: linear-gradient(120deg, #083047 70%, #0ea5e9 100%);
-      border-radius: 1rem;
-      padding: 1.2rem 1rem;
-      margin-bottom: 1.2rem;
-      box-shadow: 0 2px 10px rgba(13,110,253,0.06);
-      min-height: 100px;
-      color: #e0f2fe;
-    }
-    .tab-content h5 { font-weight: 700; color: #7dd3fc;margin-bottom: 0.7rem;}
-    /* Experience Cards */
-    .exp-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.7rem;
-      margin-bottom: 2.5rem;
+    .project-tabs-section {
       max-width: 1050px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto 2.7rem auto;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
     }
-    .exp-card {
-      flex: 1 1 290px;
-      min-width: 250px;
-      background: linear-gradient(115deg, #1e293b 60%, #2563eb 100%);
-      border-radius: 1rem;
-      box-shadow: 0 2px 12px rgba(56,189,248,0.13);
-      padding: 1.36rem 1.2rem 1.2rem 1.2rem;
-      min-height: 187px;
-      margin-bottom: 1em;
+    .project-card {
+      background: linear-gradient(120deg, #083047 70%, #0ea5e9 100%);
+      border-radius: 1.3rem;
+      box-shadow: 0 2px 18px rgba(56,189,248,0.13);
+      padding: 2.2rem 2.6rem;
+      min-width: 280px;
+      max-width: 350px;
+      color: #e0f2fe;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      align-items: center;
+      transition: transform .12s, box-shadow .12s;
+      text-align: center;
+      border: 2px solid transparent;
     }
-    .exp-title {
-      font-weight: 700;
+    .project-card:hover {
+      box-shadow: 0 4px 28px #38bdf8c0;
+      transform: translateY(-5px) scale(1.03);
+      border: 2px solid #38bdf8;
+    }
+    .project-card i {
+      font-size: 2.5rem;
       color: #7dd3fc;
-      font-size: 1.11rem;
-      margin-bottom: 0.18rem;
+      margin-bottom: 1rem;
     }
-    .exp-role {
-      color: #bae6fd;
-      font-size: 0.97rem;
-      margin-bottom: 0.5rem;
+    .project-card h2 {
+      color: #7dd3fc;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
     }
-    .exp-card ul {
-      margin-bottom: 0;
-      padding-left: 1.1em;
+    .project-card p {
+      font-size: 1.08rem;
+      color: #e0f2fe;
+      margin-bottom: 1.5rem;
     }
-    /* Footer */
+    .project-card a.btn {
+      font-weight: 600;
+      font-size: 1.12rem;
+      padding: 0.7em 2em;
+      border-radius: 2em;
+      background: linear-gradient(90deg, #38bdf8 10%, #7dd3fc 100%);
+      border: none;
+      color: #0c223e;
+      transition: background 0.12s, color 0.12s;
+      text-decoration: none;
+    }
+    .project-card a.btn:hover {
+      background: linear-gradient(90deg, #0ea5e9 15%, #38bdf8 100%);
+      color: #fff;
+    }
     .portfolio-footer {
       color: #7dd3fc;
       font-size: 0.99rem;
@@ -255,32 +215,24 @@
     }
     @media (max-width: 991px) {
       .hero-section,
-      .glass-section,
-      .exp-row { flex-direction: column; }
+      .project-tabs-section { flex-direction: column; align-items: center; }
       .hero-img-wrap,
-      .hero-content,
-      .glass-about,
-      .glass-info,
-      .exp-card { min-width: 0 !important; }
-      .hero-content, .hero-img-wrap { padding: 2rem 1.1rem; }
+      .hero-content { padding: 2rem 1.1rem; }
+      .project-card { min-width: 220px; max-width: 95vw; }
     }
     @media (max-width: 600px) {
       .hero-section { border-radius: 1rem; }
-      .glass-section { border-radius: 0.7rem; }
-      .exp-card { border-radius: 0.7rem; }
+      .project-card { border-radius: 0.7rem; }
       .hero-img { width: 140px; height: 140px; }
     }
   </style>
 </head>
 <body>
-  <!-- Hero Section (horizontal split) -->
+  <!-- Hero Section -->
   <div class="hero-section">
-    <!-- Left: Profile Image -->
     <div class="hero-img-wrap">
-      <!-- Replace the src with your actual image filename -->
-      <img src="your-profile-image.png" alt="Sushama Jadhav" class="hero-img" />
+      <img src="https://raw.githubusercontent.com/sk6685/sk6685.github.io/main/images/photo.png" alt="Sushama Jadhav" class="hero-img" />
     </div>
-    <!-- Right: Content -->
     <div class="hero-content">
       <div class="hero-title">Sushama Jadhav</div>
       <div class="hero-role">Data Professional &mdash; DE / ML / DATA SCIENCE / AI</div>
@@ -297,147 +249,52 @@
       <div class="hero-social mt-2">
         <a href="https://www.linkedin.com/in/sushamajadhav/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
         <a href="mailto:sushama@workwebmail.com" title="Email"><i class="bi bi-envelope"></i></a>
-        <a href="https://github.com/sk6685" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://github.com/sushamajadhav/SpringBoard-DataScience" target="_blank" title="SpringBoard-DataScience Repository"><i class="bi bi-github"></i></a>
       </div>
       <svg class="waves-bg" viewBox="0 0 1200 64" preserveAspectRatio="none"><path d="M0,32 C200,80 400,0 600,32 C800,64 1000,8 1200,32 L1200,64 L0,64 Z" fill="#38bdf8" fill-opacity="0.11"></path></svg>
     </div>
   </div>
 
-  <!-- About/Info Section -->
-  <div class="glass-section">
-    <!-- About Me -->
-    <div class="glass-about">
-      <div class="glass-title"><i class="bi bi-person-badge-fill"></i> About Me</div>
+  <!-- About Me Section -->
+  <section class="about-section">
+    <div class="about-title"><i class="bi bi-person-badge"></i> About Me</div>
+    <div>
       <p>
-        Hi! I'm <strong>Sushama Jadhav</strong>, a passionate Data Professional dedicated to transforming data into actionable intelligence. I love architecting scalable systems and automating analytics workflows for business impact.
+        Hello! I'm <strong>Sushama Jadhav</strong>, a passionate Data Professional with expertise in Data Engineering, Machine Learning, and Data Science. I love transforming raw data into actionable insights and architecting scalable solutions for business impact.
       </p>
       <p>
-        With 7+ years in data engineering, machine learning, and cloud technologies, I bring a blend of technical expertise and creative problem-solving to every project.
+        With over 7 years of experience in cloud platforms, automation, advanced analytics, and mentoring teams, I specialize in building robust data pipelines, deploying ML models, and making data work for organizations of all sizes. My goal is to bridge the gap between complex data and real-world decision making.
       </p>
-      <div class="glass-badges">
-        <span class="glass-badge">Python</span>
-        <span class="glass-badge">AWS</span>
-        <span class="glass-badge">Airflow</span>
-        <span class="glass-badge">Spark</span>
-        <span class="glass-badge">SQL</span>
-        <span class="glass-badge">Kubernetes</span>
-        <span class="glass-badge">Power BI</span>
-        <span class="glass-badge">Terraform</span>
-        <span class="glass-badge">Machine Learning</span>
-      </div>
     </div>
-    <!-- Quick Info/Fast Facts -->
-    <div class="glass-info">
-      <div class="glass-title"><i class="bi bi-lightbulb-fill"></i> Fast Facts</div>
-      <ul class="glass-info-list">
-        <li><i class="bi bi-code-slash"></i> 7+ years in Data Engineering & Analytics</li>
-        <li><i class="bi bi-cloud-check-fill"></i> Specialist in Cloud Data Solutions (AWS, GCP)</li>
-        <li><i class="bi bi-gear-fill"></i> Automation & CI/CD enthusiast</li>
-        <li><i class="bi bi-lightning-charge-fill"></i> Loves building scalable, automated pipelines</li>
-        <li><i class="bi bi-people-fill"></i> Mentor, team player, and business translator</li>
-      </ul>
+    <div>
+      <span class="about-badge">Python</span>
+      <span class="about-badge">AWS</span>
+      <span class="about-badge">Airflow</span>
+      <span class="about-badge">Spark</span>
+      <span class="about-badge">SQL</span>
+      <span class="about-badge">Kubernetes</span>
+      <span class="about-badge">Power BI</span>
+      <span class="about-badge">Terraform</span>
+      <span class="about-badge">Machine Learning</span>
+    </div>
+  </section>
+
+  <!-- Projects Tabs Section -->
+  <div class="project-tabs-section">
+    <div class="project-card">
+      <i class="bi bi-robot"></i>
+      <h2>Machine Learning Projects</h2>
+      <p>Explore my work on predictive modeling, automation, and end-to-end machine learning pipelines.</p>
+      <a class="btn" href="ml-projects.html">View Machine Learning Projects</a>
+    </div>
+    <div class="project-card">
+      <i class="bi bi-diagram-3-fill"></i>
+      <h2>Data Engineering Projects</h2>
+      <p>Discover robust data pipelines, cloud solutions, and scalable architectures I've engineered.</p>
+      <a class="btn" href="de-projects.html">View Data Engineering Projects</a>
     </div>
   </div>
 
-  <!-- Tabs Section -->
-  <div class="container" style="max-width: 1050px;">
-    <ul class="nav nav-tabs justify-content-center mb-4" id="techTabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="ml-tab" data-bs-toggle="tab" data-bs-target="#ml" type="button" role="tab" aria-controls="ml" aria-selected="true">
-          <i class="bi bi-cpu"></i> Machine Learning
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="ds-tab" data-bs-toggle="tab" data-bs-target="#ds" type="button" role="tab" aria-controls="ds" aria-selected="false">
-          <i class="bi bi-bar-chart-fill"></i> Data Science
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="airflow-tab" data-bs-toggle="tab" data-bs-target="#airflow" type="button" role="tab" aria-controls="airflow" aria-selected="false">
-          <i class="bi bi-diagram-3-fill"></i> Airflow
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="spark-tab" data-bs-toggle="tab" data-bs-target="#spark" type="button" role="tab" aria-controls="spark" aria-selected="false">
-          <i class="bi bi-lightning-charge-fill"></i> Spark
-        </button>
-      </li>
-    </ul>
-    <div class="tab-content mb-5" id="techTabsContent">
-      <div class="tab-pane fade show active" id="ml" role="tabpanel" aria-labelledby="ml-tab">
-        <div class="project-card">
-          <h5><i class="bi bi-robot"></i> ML Solutions</h5>
-          <ul>
-            <li>End-to-end ML pipelines: model development, deployment, monitoring (Python, scikit-learn, AWS SageMaker).</li>
-            <li>Automated retraining, model monitoring, and CI/CD for ML models.</li>
-            <li>Use cases: customer churn prediction, anomaly detection, time-series forecasting.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="ds" role="tabpanel" aria-labelledby="ds-tab">
-        <div class="project-card">
-          <h5><i class="bi bi-bar-chart-fill"></i> Data Science</h5>
-          <ul>
-            <li>Advanced analytics, EDA, and visualization (Power BI, Tableau, Matplotlib, Seaborn).</li>
-            <li>Feature engineering, statistical modeling, and business insight generation.</li>
-            <li>Examples: revenue analytics, risk scoring, customer segmentation.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="airflow" role="tabpanel" aria-labelledby="airflow-tab">
-        <div class="project-card">
-          <h5><i class="bi bi-diagram-3-fill"></i> Airflow Orchestration</h5>
-          <ul>
-            <li>Built resilient, event-driven DAGs for batch, streaming, and ETL workloads.</li>
-            <li>Automated data quality checks, notifications, and self-healing workflows.</li>
-            <li>Mentored data teams on Airflow best practices and scaling DAGs for enterprise data lakes.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="spark" role="tabpanel" aria-labelledby="spark-tab">
-        <div class="project-card">
-          <h5><i class="bi bi-lightning-charge-fill"></i> Apache Spark</h5>
-          <ul>
-            <li>Large-scale ETL and streaming with PySpark on AWS EMR and Databricks.</li>
-            <li>Performance tuning, schema management, and advanced data transformations.</li>
-            <li>Real-time event processing, log analytics, and data lake integration.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Experience Section -->
-  <div class="exp-row">
-    <div class="exp-card">
-      <div class="exp-title"><i class="bi bi-briefcase-fill"></i> Sunnova Energy</div>
-      <div class="exp-role">Data Engineer · 06/2023 – Present</div>
-      <ul>
-        <li>Designed real-time solar panel data streaming (AWS Kinesis, Lambda, Firehose).</li>
-        <li>Enhanced PySpark streaming jobs and developed resilient Airflow workflows.</li>
-        <li>Migrated legacy ETL to Lambda/Docker, automated CI/CD (Terraform, GitHub Actions).</li>
-        <li>Built Power BI dashboards for executive insights.</li>
-      </ul>
-    </div>
-    <div class="exp-card">
-      <div class="exp-title"><i class="bi bi-briefcase-fill"></i> BNY Mellon</div>
-      <div class="exp-role">Data Engineer (Contract) · 08/2019 – 05/2023</div>
-      <ul>
-        <li>Built real-time pipelines with Airflow, Spark Streaming, and Snowflake.</li>
-        <li>Developed ETL pipelines with AWS Glue and Airflow.</li>
-        <li>Managed AWS environments and optimized Redshift schemas.</li>
-      </ul>
-    </div>
-    <div class="exp-card">
-      <div class="exp-title"><i class="bi bi-briefcase-fill"></i> Lululemon Athletica Inc</div>
-      <div class="exp-role">Data Engineer Trainee · 07/2018 – 07/2019</div>
-      <ul>
-        <li>Built SQL & GCP Data Fusion pipelines, reduced ingestion times by 50%.</li>
-        <li>Automated reporting and incident analytics with Python and Power BI.</li>
-        <li>Monitored pipelines using AWS Lambda and CloudWatch.</li>
-      </ul>
-    </div>
-  </div>
   <div class="portfolio-footer">
     &copy; 2025 Sushama Jadhav · Data Engineering Portfolio
   </div>
